@@ -72,7 +72,7 @@ let title= each.querySelector('.card-title');
 let url = each.querySelector('.card-text');
 
 
-if(title.innerHTML.toLowerCase().includes(input) || url.innerHTML.toLowerCase().includes(input)){
+if(title.textContent.toLowerCase().includes(input) || url.textContent.toLowerCase().includes(input)){
 each.style.display = 'block';
 
 }else{
@@ -186,7 +186,7 @@ window.addEventListener('mouseover', function(event) {
 var x = event.clientX;
 var y = event.clientY;
 var screenWidth = window.innerWidth;
-var topRange = 70; // set the range for the top of the screen in pixels
+var topRange = 50; // set the range for the top of the screen in pixels
 
 var widthRange = 3 * 16; // set the range for the width in pixels (5em)
 

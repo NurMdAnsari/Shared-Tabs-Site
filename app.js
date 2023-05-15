@@ -118,9 +118,9 @@ let errors = 0;
                  
                    title = $1('meta[property="og:title"]').attr('content') || $1('title').text() || $1('meta[name="title"]').attr('content')
                   description = $1('meta[name="description"]').attr('content') || $1('meta[property="og:description"]').attr('content') || $1('meta[name="twitter:description"]').attr('content') || '';
-               
+               console.log(title);
                 if(title.trim().length<=20){
-title = title + ' - ' + description;
+title = title + ' - ' + `<small>${description.slice(0,100)}</small>`;
                 }
                 }).catch(error => {
                   title = $('meta[property="og:title"]').attr('content') || $('title').text() || $('meta[name="title"]').attr('content')
@@ -156,11 +156,11 @@ if(result.status===200 || result.status===403  ){
   icon = `${baseUrl}/favicon.ico`
   
 }else{
-  icon = `/no-favicon.ico`
+  icon = `/no-favicon.png`
  
 }
           }).catch(error => {
-            icon = `/no-favicon.ico`
+            icon = `/no-favicon.png`
           })
               
             }
