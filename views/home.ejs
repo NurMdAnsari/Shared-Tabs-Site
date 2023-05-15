@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Tabs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+  <img class="extension" src="extension.svg">
+    <div class="container" style="position: relative;" >
+    
+        <div style="position: relative;  -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none;" class="d-flex justify-content-center align-items-center mt-2">
+        
+            <div class="input-group search" >
+  <input type="text" placeholder="Search Title or URL" class="form-control searchinput" aria-label="Dollar amount (with dot and two decimal places)">
+  <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg></span>
+  
+</div>
+            <h2 class="text-center m-3 mb-5 gradient-text" style="letter-spacing:1px;font-family: 'Raleway', sans-serif;
+            font-weight: 500;font-size:2.1em"><img src="64.png" class="mb-1" style="max-width: 1.2em;margin-right:0.5em"><span class="heading">Shared Ta</span>bs</h2>
+        <div class="alltabs">
+          <div class="dropmenu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg></div>
+          <p class="btn btn-sm btn-secondary opentabs" style="font-size:1em;font-weight: 600;">Open All Tabs<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2 bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+            <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707l-4.096 4.096z"/>
+          </svg></p>
+        </div>
+      </div>
+
+
+      <div class="card mb-3 bg-secondary mainmenu hide" style="position: relative;" >
+ 
+        <div class="row g-0">
+    
+         
+      
+    
+            <div class="col-12 mb-0 pb-0">
+              <form action="/add" method="POST">
+              <div class="card-body d-flex justify-content-center align-items-center">
+              
+                  <input type="text" name="urls" class="form-control me-4" placeholder="Enter Url To Save " style="max-width:40em;border-radius: 0px;">
+                  <button class="btn btn-success">Add <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-plus mb-1" viewBox="0 0 16 16">
+                    <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                  </svg></button>
+                  
+              </div>
+              <div class="d-flex justify-content-starts align-items-center ms-3" >
+              <small class="form-text text-light" style="font-size:0.6em">*Add Empty Space between Each Url to Add multiple Urls At once</small></div>
+            </form>
+              </div>
+              <div class="col-12 mb-0 pb-0">
+                <div class="card-body d-flex justify-content-center align-items-center"><a href="/removeall" style="text-decoration: none;">
+                  <span class="btn btn-danger px-4 d-flex justify-content-center align-items-center">Remove All Tabs <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash2-fill ms-2" viewBox="0 0 16 16">
+                    <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
+                  </svg></span>
+                </a>
+                </div>
+                </div>
+    
+    
+               </div>
+    
+                </div>
+      
+<% if(tabs.length==0){ %>
+
+  <div class="alert alert-secondary mt-4 text-center" role="alert">
+    No tabs Has been Found!
+  </div>
+
+  <% } %>
+  
+ 
+
+      <% tabs.forEach(function(tab){ %>
+
+     
+        <div class="card mb-3" style="position: relative;" >
+          <% if(tab.pin){  %>
+           
+              <svg style="position:absolute;right:-0.7em;top:-0.5em" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-angle-fill text-dark" viewBox="0 0 16 16">
+                <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146z"/>
+              </svg>
+             <% } %>
+         
+            <div class="row g-0">
+
+              
+              <div class="col-2 col-md-1 d-flex justify-content-center align-items-center">
+                <img src="<%= tab.icon.trim() %>" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-10 col-md-11">
+                <div class="card-body row">
+                    <div class="col-md-10 " style="position: relative;">
+                      <h5 class="card-title"><%= tab.title %></h5>
+                      <p class="card-text lead allurl" style="font-size:1em"><span><%= tab.url %></span></p>
+                       <span class="text-muted time" ><%= tab.createdAt %></span>
+                    </div>
+                 
+                <div class="col-md-2 mt-md-2 " style="position: relative;">
+ <p class="card-text"><a class="url" href="<%= tab.url %>" target="_blank" style="text-decoration: none;color:white"><span class="btn btn-sm btn-primary">Open in New Tab</span></a>
+  <div class="dropdown  dropstart">
+  <span class="menu "  data-bs-toggle="dropdown" aria-expanded="false">
+  
+    <svg style="display: block;
+    margin: auto;" xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-three-dots d-none d-md-block" viewBox="0 0 16 16">
+      <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+    </svg>
+    <svg style="display: block;
+    margin: auto;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-three-dots-vertical d-block d-md-none" viewBox="0 0 16 16">
+      <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+    </svg>
+   
+  </span>
+ 
+  <ul class="dropdown-menu dropdown-menu-dark text-center" >
+   
+    <li><a class="dropdown-item  <% if(!tab.pin){  %>
+      text-warning
+      <% }else{ %>
+        text-primary
+       <% } %>  d-flex justify-content-between align-items-center pin " style="font-weight:600"  href="pin/<%= tab.id %>"><span></span>
+     <% if(!tab.pin){  %>
+     Pin to Top
+     <% }else{ %>
+      Unpin
+      <% } %>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-angle-fill" viewBox="0 0 16 16">
+      <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146z"/>
+    </svg></a>
+  
+  
+  </li>
+  <li><a style="font-weight:600" class="dropdown-item d-flex justify-content-between align-items-center text-danger remove" href="remove/<%= tab.id %>"><span></span>Remove<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="ms-1 bi bi-trash2-fill" viewBox="0 0 16 16">
+    <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
+  </svg></a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item text-success close" style="font-weight:600"  href="#">Close</a></li>
+  </ul>
+  </div>
+</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+       
+
+        <% }) %>
+      
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      
+      <script src="scripts/main.js"></script>
+</body>
+</html>

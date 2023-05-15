@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Extension - Share Tabs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    a{
+       color:rgb(23, 220, 247)
+    }
+    a:hover{
+        color:yellow
+    }
+    button{
+        border-radius: 0px !important;
+    }
+    .gradient-text {
+  background:conic-gradient(#2D2D2D, #4D4D4D, #6D6D6D, #ADADAD,#2D2D2D, #4D4D4D, #6D6D6D, #8D8D8D, #ADADAD);;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.gradient-text:hover{
+  background:conic-gradient(#ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000,#ff0000, #ffff00, #ff00ff, #ff0000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.info{
+    cursor: pointer;
+}
+</style>
+</head>
+<body class="container">
+ <div class="row mt-5">
+    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+        <h4><span class="gradient-text">Get Share Tabs - Extension </span><button class="btn btn-primary ms-3 download">Download <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-download mb-1" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg></button> </h4>
+        <div class="info mt-5 bg-secondary p-5 text-light mb-3">
+            <p class="lead">Steps on How to install:</p>
+            <p>1.Download <b>sharetabs.zip </b>Extension file.</p>
+            <p>2.Go to <b> Extensions->manage extensions </b> in browser from <b>options menu</b></p>
+            <p>3.<b>Enable developer</b> option from extension menu</p>
+            <p>4.Go to folder in which extension <b> sharetabs.zip </b> has been downloaded.e.g. Download folder</p>
+            <p>5. <b>Extract it </b>. Download <a href="https://www.rarlab.com/download.htm" target="_blank">winrar</a> for pc or<a href="https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver&pli=1" target="_blank"> Zarchiver app </a>for android to extract file.</p>
+            <p>6.Click on <b>load unpacked</b> and select the extracted folder.e.g folder name Sharetabs *select lowermost folder which contains files.</p>
+            <p>7.thats it now you can use extension by clicking from <b>extension menu</b>!Enjoy.</p>
+        </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+  <script>
+    let download = document.querySelector('.download');
+    download.addEventListener('click',()=>{
+        window.open('/sharetabs.zip', '_self');
+    })
+  </script>
+</body>
+</html>

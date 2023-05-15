@@ -1,0 +1,11 @@
+const mongoose = require('mongoose');
+
+
+let tabSchema = new mongoose.Schema({
+url:{type:String,required:true},
+title:{type:String,required:true},
+icon:{type:String,required:true},
+pin:{type:Boolean,default:false},
+},{ timestamps: true });
+
+module.exports = mongoose.model('Tab', tabSchema);
