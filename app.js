@@ -222,7 +222,7 @@ app.post('/add', async(req, res) => {
   let { urls } = req.body;
 
 let allurls = urls.split(' ');
-fetch('https://tabs.aquafusion.in/urls', {
+fetch(process.env.ForwordURLS, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({urls:allurls})
