@@ -45,7 +45,7 @@ window.setTimeout(function(){
 popup.remove();
 },800);
   let TempText = document.createElement("input");
-TempText.value = each.innerHTML;
+TempText.value = each.textContent;
 document.body.appendChild(TempText);
 TempText.select();
 

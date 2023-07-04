@@ -222,7 +222,7 @@ app.post('/add', async(req, res) => {
   let { urls } = req.body;
 
 let allurls = urls.split(' ');
-fetch('http://localhost:8000/urls', {
+fetch('https://tabs.aquafusion.in/urls', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({urls:allurls})
@@ -241,6 +241,6 @@ fetch('http://localhost:8000/urls', {
 app.get('/getextension', async(req, res) => {
   res.render('extension');
 });
-app.listen(8000, () => {
+app.listen(9004, () => {
 console.log('Server started!');
 });
